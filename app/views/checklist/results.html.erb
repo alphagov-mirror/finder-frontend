@@ -16,5 +16,6 @@
     context: "Based on your answers",
     title: "Actions you may need to complete"
   } %>
-  <%= render 'results_actions', topic_search_results: @checklist.topic_search_results %>
+
+  <%= render 'action_sections', sections: @checklist.action_sections %>
 </div>
