@@ -190,10 +190,14 @@ criteria:
   text: You live in the EU
 - key: working-eu
   text: You are employed in the EU
+- key: working-ie
+  text: You are employed in Ireland
 - key: working-uk
   text: You are employed in the UK
 - key: studying-eu
   text: You are studying in the EU
+- key: studying-ie
+  text: You are studying in Ireland
 - key: studying-uk
   text: You are studying in the UK
 - key: living-driving-eu
