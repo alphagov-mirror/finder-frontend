@@ -37,6 +37,7 @@ RSpec.feature "Brexit Checker workflow", type: :feature do
     answer_question("nationality")
     answer_question("living", "Somewhere else")
     answer_question("employment")
+    answer_question("travelling-business")
     answer_question("travelling")
     answer_question("do-you-own-a-business")
   end
@@ -56,6 +57,7 @@ RSpec.feature "Brexit Checker workflow", type: :feature do
     answer_question("nationality", "British")
     answer_question("living", "UK")
     answer_question("employment")
+    answer_question("travelling-business", "Yes")
     answer_question("travelling", "To another EU country, Iceland, Liechtenstein, Norway or Switzerland")
     answer_question("activities", "Take your pet")
   end
