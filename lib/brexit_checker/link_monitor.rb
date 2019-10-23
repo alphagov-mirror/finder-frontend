@@ -15,13 +15,12 @@ class BrexitChecker::LinkMonitor
     puts actions_with_invalid_guidance_urls.map(&:title)
   end
 
-  private
+private
 
   def link_valid?(url)
     parsed_url = URI.parse(url)
     req = Net::HTTP.new(parsed_url.host, parsed_url.port)
-    req.use_ssl = parsed_url.scheme=='https'
-    req.request_head(parsed_url.path).code=='200'
+    req.use_ssl = parsed_url.scheme == "https"
+    req.request_head(parsed_url.path).code == "200"
   end
-
 end
