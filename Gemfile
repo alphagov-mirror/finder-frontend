@@ -13,7 +13,7 @@ gem "govuk_publishing_components", "~> 21.7.0"
 gem "rails", "~> 5.2.3"
 gem "slimmer", "~> 13.2.0"
 
-gem "sass-rails", "~> 5.1"
+gem "sass-rails", "~> 6"
 gem "uglifier", "~> 4.2"
 gem "whenever", "~> 1.0.0"
 
@@ -30,7 +30,6 @@ end
 group :development, :test do
   gem "awesome_print"
   gem "dotenv-rails"
-  gem "govuk-lint", "~> 4.0.1"
   gem "govuk_schemas", "~> 4.0"
   gem "jasmine-rails"
   gem "pry-byebug"
