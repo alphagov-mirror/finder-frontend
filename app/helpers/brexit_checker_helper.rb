@@ -8,7 +8,7 @@ module BrexitCheckerHelper
   def format_action_audiences(actions)
     action_groups = actions.group_by(&:audience)
 
-    action_groups.map do |key, action_group|
+    action_groups = action_groups.map do |key, action_group|
       {
         heading: I18n.t("brexit_checker.results.audiences.#{key}.heading"),
         actions: action_group.sort_by.with_index do |action, index|
@@ -16,6 +16,8 @@ module BrexitCheckerHelper
         end,
       }
     end
+
+    action_groups.reverse
   end
 
   def filter_items(items, criteria_keys)
