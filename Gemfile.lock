@@ -222,6 +222,7 @@ GEM
     nokogiri (1.10.5)
       mini_portile2 (~> 2.4.0)
     null_logger (0.0.1)
+    oj (3.9.2)
     os (1.0.1)
     parallel (1.18.0)
     parser (2.6.5.0)
@@ -433,6 +434,7 @@ DEPENDENCIES
   govuk_test
   jasmine-rails
   launchy (~> 2.4.2)
+  oj (~> 3.9.2)
   pry-byebug
   rails (~> 5.2.3)
   rails-controller-testing
