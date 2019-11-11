@@ -353,6 +353,7 @@ describe FindersController, type: :controller do
 
       expect(json_response["errors"]["public_timestamp"]["from"]).to be true
       expect(json_response["errors"]["public_timestamp"]["to"]).to be false
+      expect(response.status).to eq 400
     end
 
     it "should detect bad 'to' dates" do
@@ -363,6 +364,7 @@ describe FindersController, type: :controller do
       json_response = JSON.parse(response.body)
       expect(json_response["errors"]["public_timestamp"]["from"]).to be false
       expect(json_response["errors"]["public_timestamp"]["to"]).to be true
+      expect(response.status).to eq 400
     end
   end
 

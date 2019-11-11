@@ -20,9 +20,9 @@ class FindersController < ApplicationController
         @search_query = initialize_search_query
         if content_item.is_search? || content_item.is_finder?
           @spelling_suggestion_presenter = spelling_suggestion_presenter
-          render json: json_response
+          render json: json_response, status: response_status
         else
-          render json: {}, status: :not_found
+          render json: {}, status: response_status(:not_found)
         end
       end
       format.atom do
@@ -36,7 +36,7 @@ class FindersController < ApplicationController
       end
     end
   rescue ActionController::UnknownFormat
-    render plain: "Not acceptable", status: :not_acceptable
+    render plain: "Not acceptable", status: response_status(:not_acceptable)
   end
 
   def show_page_variables
@@ -53,6 +53,14 @@ private
   attr_reader :search_query
 
   helper_method :facet_tags, :i_am_a_topic_page_finder, :result_set_presenter, :content_item, :signup_links, :filter_params, :facets
+
+  def response_status(code = nil)
+    if search_query.present?
+      search_query.invalid? ? :bad_request : code
+    else
+      code
+    end
+  end
 
   def redirect_to_destination
     @redirect = content_item.redirect
