@@ -298,13 +298,24 @@
       }).done(function (response) {
         liveSearch.cache($.param(liveSearch.state), response)
         liveSearch.displayResults(response, this.searchState)
-      }).error(function () {
-        liveSearch.showErrorIndicator()
+      }).error(function (response) {
+        liveSearch.handleAjaxError(response, liveSearch.state, this.searchState)
       })
     } else {
       this.displayResults(cachedResultData, searchState)
       var out = new $.Deferred()
       return out.resolve()
+    }
+  }
+  LiveSearch.prototype.handleAjaxError = function handleAjaxError (response, state, searchState) {
+    // if user enters an invalid date in the date filters, we raise a 400 error for logging
+    // but we still return a JSON with results so we want to update the page as if it
+    // were a 200 success
+    if ((response && response.status === 400) && typeof (response.responseJSON) !== 'undefined') {
+      this.cache($.param(state), response.responseJSON)
+      this.displayResults(response.responseJSON, searchState)
+    } else {
+      this.showErrorIndicator()
     }
   }
 
