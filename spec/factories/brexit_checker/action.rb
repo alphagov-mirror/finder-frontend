@@ -5,7 +5,7 @@ FactoryBot.define do
     id { SecureRandom.uuid }
     consequence { "A consequence" }
     criteria { %w(construction) }
-    audience { "citizen" }
+    audience { "business" }
     priority { 5 }
 
     initialize_with { BrexitChecker::Action.new(attributes) }
