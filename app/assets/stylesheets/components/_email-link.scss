@@ -10,17 +10,11 @@
 
   .app-c-email-link__icon {
     position: relative;
-    margin-right: govuk-spacing(2);
-    top: 5px;
+    margin-right: 5px;
+    top: govuk-spacing(1);
   }
 
   .app-c-email-link__link {
-    .app-c-email-link__icon {
-      position: relative;
-      margin-right: govuk-spacing(2);
-      top: govuk-spacing(1);
-      fill: $govuk-link-colour;
-    }
 
     &:visited .app-c-email-link__icon {
       fill: $govuk-link-visited-colour;
