@@ -3,12 +3,16 @@ groups:
 - key: visiting-eu
   text: Visiting the EU
   priority: 9
+  exclude_criteria:
+  - visiting-ie
 - key: visiting-uk
   text: Visiting the UK
   priority: 8
 - key: visiting-ie
   text: Visiting Ireland
   priority: 7
+  exclude_criteria:
+  - visiting-eu
 - key: living-eu
   text: Living in the EU
   priority: 6
