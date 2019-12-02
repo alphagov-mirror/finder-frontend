@@ -1,0 +1,20 @@
+---
+groups:
+- key: visiting-eu
+  text: Visiting the EU
+- key: visiting-uk
+  text: Visiting the UK
+- key: visiting-ie
+  text: Visiting Ireland
+- key: living-eu
+  text: Living in the EU
+- key: living-ie
+  text: Living in Ireland
+- key: living-uk
+  text: Living in the UK
+- key: working-uk
+  text: Working in the UK
+- key: studying-eu
+  text: Studying in the EU
+- key: studying-uk
+  text: Studying in the UK
