@@ -1,0 +1,25 @@
+<% heading = t('brexit_checker.results.audiences.citizen.heading') %>
+<section class="brexit-checker-actions">
+  <header>
+    <h2 class="govuk-heading-l action-audience__heading">
+      <%= heading %>
+    </h2>
+  </header>
+  <section class="brexit-checker-audience">
+    <% citizen_results.each.with_index do |group, group_index| %>
+      <% if group[:actions].any? %>
+        <section class="brexit-checker-actions__group">
+          <div class="govuk-grid-row">
+            <%= render 'results_criteria', criteria: group[:criteria], heading: group[:group].text %>
+            <div class="govuk-grid-column-two-thirds">
+              <%= render "action_list", {
+                analytics_group: "#{heading} #{" - #{group[:heading]} - "}#{group_index + 1}.",
+                actions: group[:actions]
+              } %>
+            </div>
+          </div>
+        </section>
+      <% end %>
+    <% end %>
+  </section>
+</section>
