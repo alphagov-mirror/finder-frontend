@@ -1,4 +1,8 @@
 .brexit-checker-results-page {
+  .brexit-checker__criteria {
+    @include govuk-font(16);
+  }
+
   .brexit-checker-results {
     margin-top: govuk-spacing(6);
   }
@@ -10,6 +14,10 @@
 
   .brexit-checker__action {
     margin: 0 0 govuk-spacing(6);
+
+    .brexit-checker__action_title {
+      font-weight: bold;
+    }
   }
 
   .brexit-checker__content-wrapper {
