@@ -1,8 +1,15 @@
-<section class="brexit-checker-actions">
+<% heading = t('brexit_checker.results.audiences.business.heading') %>
+<section
+  class="brexit-checker-actions"
+  data-analytics-ecommerce
+  data-ecommerce-start-index="1"
+  data-list-title="Brexit checker results: <%= heading %>"
+  data-search-query
+>
   <section class="brexit-checker-audience">
       <header>
         <h2 class="govuk-heading-l action-audience__heading">
-          <%= t('brexit_checker.results.audiences.business.heading') %>
+          <%= heading %>
         </h2>
       </header>
       <section class="brexit-checker-actions__group">
