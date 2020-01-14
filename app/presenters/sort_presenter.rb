@@ -49,15 +49,11 @@ private
         label: option["name"],
         value: option_value(option),
         key: option["key"],
-        default: is_default?(option),
+        default: option_value(option) == option_value(raw_default_option),
         selected: option_value(option) == option_value(selected_option),
         disabled: option_value(option) == disabled_option_value,
       )
     end
-  end
-
-  def is_default?(option)
-    option["default"]
   end
 
   def options_as_hashes
@@ -77,7 +73,12 @@ private
   end
 
   def raw_default_option
-    sort_options.find { |option| option["default"] }
+    default = sort_options.find { |option| option["default"] }
+    if default == popularity_option && !relevance_option.nil? && keywords.present?
+      relevance_option
+    else
+      default
+    end
   end
 
   def relevance_option
