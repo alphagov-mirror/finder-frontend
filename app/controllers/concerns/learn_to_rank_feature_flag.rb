@@ -4,7 +4,6 @@ module LearnToRankFeatureFlag
   end
 
   def ranker_enabled
-    ranker_header = request.headers["Govuk-Use-Search-Reranker"]
-    ranker_header.present? && ranker_header == "true"
+    true
   end
 end
