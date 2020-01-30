@@ -5,7 +5,7 @@ RSpec.describe Registries::RolesRegistry do
   let(:rummager_params) do
     {
       count: 0,
-      aggregate_roles: "1500,examples:0,order:value.title",
+      facet_roles: "1500,examples:0,order:value.title",
     }
   end
   let(:rummager_url) { "#{Plek.current.find('search')}/search.json?#{rummager_params.to_query}" }
