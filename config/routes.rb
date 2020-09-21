@@ -42,5 +42,8 @@ FinderFrontend::Application.routes.draw do
       topical_events.include?("coronavirus-covid-19-uk-government-response")
   }
 
+  # GOV.UK Accounts discovery routes
+  get "/transition-check/save-your-results" => "brexit_checker#save_results", as: :transition_checker_save_results
+
   get "/*slug" => "finders#show", as: :finder
 end
