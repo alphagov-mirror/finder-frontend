@@ -1,7 +1,6 @@
 ---
 actions:
 - id: S001
-  priority: 8
   title: Apply to the EU Settlement Scheme by 30 June 2021 to continue living in the
     UK - you must have arrived in the UK before January 2021
   title_url: https://www.gov.uk/settled-status-eu-citizens-families/applying-for-settled-status
@@ -20,8 +19,8 @@ actions:
   audience: citizen
   grouping_criteria:
   - living-uk
+  priority: 0
 - id: S003
-  priority: 5
   title: Apply for a permit to join your family member in the UK if they are from
     the EU, Switzerland, Norway, Iceland or Liechtenstein
   title_url: https://www.gov.uk/family-permit
@@ -37,8 +36,8 @@ actions:
   audience: citizen
   grouping_criteria:
   - living-uk
+  priority: 0
 - id: S004
-  priority: 5
   title: Take out appropriate travel insurance with health cover before travelling
     to the UK
   consequence: You will be charged for your NHS healthcare if you do not have the
@@ -56,8 +55,8 @@ actions:
   audience: citizen
   grouping_criteria:
   - visiting-uk
+  priority: 0
 - id: S005
-  priority: 5
   title: Contact your home university to check if you can continue studying on your
     Erasmus+ placement in the UK
   consequence: If you have not started your placement, you may not be able to study
@@ -73,8 +72,8 @@ actions:
   audience: citizen
   grouping_criteria:
   - studying-uk
+  priority: 0
 - id: S007
-  priority: 5
   title: Contact your home university to check if you can continue your Erasmus+ placement
     in the EU
   consequence: If you have not already started your placement you may not be able
@@ -92,8 +91,8 @@ actions:
   audience: citizen
   grouping_criteria:
   - studying-eu
+  priority: 0
 - id: S008
-  priority: 8
   title: Check your passport’s issue and expiry dates for travel to Europe
   consequence: You should have at least 6 months left on your UK passport and it needs
     to be less than 10 years old, or you may not be able to travel.
@@ -109,8 +108,8 @@ actions:
   audience: citizen
   grouping_criteria:
   - visiting-eu
+  priority: 0
 - id: S009
-  priority: 8
   title: Contact your vet at least 4 months before travelling to make sure your pet
     or assistance dog is able to travel to the EU
   consequence: If your pet or assistance dog does not have the proper documents, you
@@ -131,8 +130,8 @@ actions:
   grouping_criteria:
   - visiting-eu
   - visiting-ie
+  priority: 0
 - id: S010
-  priority: 5
   title: Check whether your mobile phone company has changed its mobile roaming charges
     before travelling to the EU, Switzerland, Norway, Iceland or Liechtenstein
   consequence: You may be charged for using your mobile device in the EU, Switzerland,
@@ -152,8 +151,8 @@ actions:
   grouping_criteria:
   - visiting-eu
   - visiting-ie
+  priority: 0
 - id: S011
-  priority: 9
   title: Take out appropriate travel insurance with health cover before travelling
     to the EU
   consequence: You may not have access to free emergency medical treatment and could
@@ -171,8 +170,8 @@ actions:
   audience: citizen
   grouping_criteria:
   - visiting-eu
+  priority: 0
 - id: S013
-  priority: 8
   title: Check what you need to do to make sure you can travel through the border
     of the country you are visiting
   consequence: You may not be allowed to enter the EU if you cannot show you meet
@@ -189,8 +188,8 @@ actions:
   audience: citizen
   grouping_criteria:
   - visiting-eu
+  priority: 0
 - id: S014
-  priority: 3
   title: Find out if your family needs to apply to the EU Settlement Scheme to come
     to the UK with you
   title_url: https://www.gov.uk/settled-status-eu-citizens-families
@@ -204,15 +203,15 @@ actions:
   audience: citizen
   grouping_criteria:
   - living-uk
+  priority: 0
 - id: S015
-  priority: 5
   title: To get free NHS healthcare, prove that you've returned to the UK to live
     and you meet the ordinary residence test
   consequence: If you cannot prove you meet the ordinary residence test, you may be
     charged for NHS services.
   guidance_prompt: More information
-  guidance_link_text: Living in Europe
-  guidance_url: https://www.gov.uk/guidance/living-in-europe#uk-nationals-in-the-eu
+  guidance_link_text: Using the NHS when you return to live in the UK
+  guidance_url: https://www.gov.uk/guidance/using-the-nhs-when-you-return-to-live-in-the-uk
   criteria:
   - all_of:
     - nationality-uk
@@ -220,8 +219,8 @@ actions:
   audience: citizen
   grouping_criteria:
   - living-uk
+  priority: 0
 - id: S022
-  priority: 2
   title: Check if you need an International Driving Permit before you drive in the
     EU, Switzerland, Norway, Iceland or Liechtenstein
   consequence: You could get a fine or your vehicle could be seized if you drive without
@@ -239,8 +238,8 @@ actions:
   audience: citizen
   grouping_criteria:
   - visiting-eu
+  priority: 0
 - id: S024
-  priority: 2
   title: Put a GB sticker on the back of your vehicle if it's registered in the UK,
     even if your number plate already shows GB with a Euro symbol
   consequence: You could get a fine if you do not have a GB sticker when you need
@@ -258,8 +257,8 @@ actions:
   audience: citizen
   grouping_criteria:
   - visiting-eu
+  priority: 0
 - id: S025
-  priority: 2
   title: Check for disruption to your journey before you travel between the UK and
     the EU - border checks may take longer
   consequence: If you do not allow enough time, you could miss your flight, train
@@ -280,8 +279,8 @@ actions:
   grouping_criteria:
   - visiting-uk
   - visiting-eu
+  priority: 0
 - id: S026
-  priority: 2
   title: Contact your university to check if you can continue studying in the EU
   consequence: Changes to your residency, healthcare or tuition fee status may stop
     you from completing your course.
@@ -295,23 +294,8 @@ actions:
   audience: citizen
   grouping_criteria:
   - studying-eu
-- id: S028
-  priority: 2
-  title: Check with your local council that you're eligible for housing services if
-    you’re returning to the UK from the EU
-  consequence: You may not be able to apply for housing services if you are not eligible.
-  guidance_prompt: More information
-  guidance_link_text: Council housing
-  guidance_url: https://www.gov.uk/council-housing
-  criteria:
-  - all_of:
-    - nationality-uk
-    - return-to-uk
-  audience: citizen
-  grouping_criteria:
-  - living-uk
+  priority: 0
 - id: S029
-  priority: 11
   title: Find out how to apply to be a resident in the EU country you live in
   title_url: https://www.gov.uk/uk-nationals-living-eu
   consequence: You may need to leave the country you live in if you are not a resident.
@@ -322,8 +306,8 @@ actions:
   audience: citizen
   grouping_criteria:
   - living-eu
+  priority: 0
 - id: S030
-  priority: 5
   title: Exchange your UK licence for a licence issued by the EU country you live
     in
   consequence: You will not be able to drive in the EU with a UK licence.
@@ -341,8 +325,8 @@ actions:
   grouping_criteria:
   - living-eu
   - living-ie
+  priority: 0
 - id: S031
-  priority: 4
   title: Test your vehicle for roadworthiness in the EU country you live in
   consequence: Your UK MOT test certificate will not be recognised in the EU.
   guidance_prompt: More information
@@ -359,8 +343,8 @@ actions:
   grouping_criteria:
   - living-eu
   - living-ie
+  priority: 0
 - id: S032
-  priority: 4
   title: Contact your vet at least 4 months before travelling to make sure your pet
     or assistance dog is able to travel to the UK
   consequence: If your pet (dog, cat or ferret) or assistance dog does not have the
@@ -379,8 +363,8 @@ actions:
   audience: citizen
   grouping_criteria:
   - visiting-uk
+  priority: 0
 - id: S034
-  priority: 8
   title: Check if you need a visa or work permit and meet the professional requirements
     to travel to the EU, Switzerland, Norway, Iceland or Liechtenstein for work
   consequence: You may not be able to enter or work in some countries if you do not
@@ -393,8 +377,8 @@ actions:
   audience: citizen
   grouping_criteria:
   - visiting-eu
+  priority: 0
 - id: S036
-  priority: 5
   title: Get a motor insurance green card or other proof of insurance for your vehicle,
     caravan or trailer if it's registered in the EU, Switzerland, Norway, Iceland,
     Liechtenstein, Andorra or Serbia, and you will be driving in the UK
@@ -411,8 +395,8 @@ actions:
   audience: citizen
   grouping_criteria:
   - visiting-uk
+  priority: 0
 - id: T006
-  priority: 8
   title: Check if your employees need a visa or work permit and that they meet professional
     requirements for the country they’re going to
   consequence: You or your employees might not be able to enter or work in some countries.
@@ -425,8 +409,8 @@ actions:
     - employ-eu-citizens
     - provide-services-do-business-in-eu
   audience: business
+  priority: 0
 - id: T007
-  priority: 8
   title: Check if you need to change how you do accounting and reporting
   consequence: You risk breaching reporting requirements in the EU, Norway, Iceland
     or Liechtenstein if you do not make any changes you need to.
@@ -436,8 +420,8 @@ actions:
   criteria:
   - provide-services-do-business-in-eu
   audience: business
+  priority: 0
 - id: T010
-  priority: 5
   title: Check if your existing UK Civil Aviation Authority or EASA certificates and
     licences will be valid
   consequence: You risk not being able to work or operate in the aviation industry
@@ -451,8 +435,8 @@ actions:
     - aero-space
     - air-passenger-freight
   audience: business
+  priority: 0
 - id: T011
-  priority: 5
   title: Check if you need to change your contracts to broadcast licensed content
     outside the UK
   consequence: You risk not being able to broadcast outside the UK if you do not get
@@ -470,13 +454,11 @@ actions:
       - personal-eu-org-provide
       - ip-copyright
   audience: business
+  priority: 0
 - id: T012
-  priority: 5
-  title: Check if you need the permission of the intellectual copyright holder to
-    continue to parallel export IP-protected goods from the UK to the EU, Norway,
-    Iceland or Liechtenstein
-  consequence: You risk not being able to continue to parallel export IP-protected
-    products from the UK to these locations if you do not have permission.
+  title: Check the new rules for parallel exporting IP protected goods from the UK
+    to the EU, Norway, Iceland and Liechtenstein
+  consequence: You may infringe on IP rights if you do not follow the new rules.
   guidance_prompt: More information
   guidance_link_text: Exhaustion of IP rights and parallel trade from 1 January 2021
   guidance_url: https://www.gov.uk/guidance/exhaustion-of-ip-rights-and-parallel-trade-after-the-transition-period
@@ -493,8 +475,8 @@ actions:
       - ip-patents
       - ip-exhaustion-rights
   audience: business
+  priority: 0
 - id: T013
-  priority: 5
   title: Check contracts relating to EU space programmes with your contracting authority
   consequence: You may not be able to bid for future contracts with EU space programmes.
   guidance_prompt: More information
@@ -503,8 +485,8 @@ actions:
   criteria:
   - aero-space
   audience: business
+  priority: 0
 - id: T014
-  priority: 5
   title: Check if you need to find replacement data or services if you use the Copernicus
     or EU Space Surveillance and Tracking programmes
   consequence: You may lose access to some data and your services may not work.
@@ -514,8 +496,8 @@ actions:
   criteria:
   - aero-space
   audience: business
+  priority: 0
 - id: T016
-  priority: 5
   title: Find out how to comply with the new UK nuclear safeguards arrangements
   consequence: All operators in the UK civil nuclear sector will need to comply with
     the new domestic safeguards regime.
@@ -525,8 +507,8 @@ actions:
   criteria:
   - nuclear
   audience: business
+  priority: 0
 - id: T017
-  priority: 5
   title: Register to use the open general export licence to export 'dual use' nuclear
     goods from the UK
   consequence: You will not be able to export 'dual use' nuclear goods from the UK
@@ -537,8 +519,8 @@ actions:
   criteria:
   - nuclear
   audience: business
+  priority: 0
 - id: T018
-  priority: 5
   title: Get a licence to import certain nuclear materials into the UK
   consequence: You will not be able to import some types of nuclear materials into
     the UK without the right licence.
@@ -550,8 +532,8 @@ actions:
   criteria:
   - nuclear
   audience: business
+  priority: 0
 - id: T019
-  priority: 5
   title: Make sure you have the right authorisations to ship radioactive waste and
     spent fuel into and out of the UK
   consequence: Failing to comply with the new regulations will be a criminal offence.
@@ -561,8 +543,8 @@ actions:
   criteria:
   - nuclear
   audience: business
+  priority: 0
 - id: T020
-  priority: 5
   title: Check the rules for moving radioactive sources into the UK
   consequence: You will not be able to move radioactive sources into the UK from the
     EU without making a written declaration.
@@ -574,8 +556,8 @@ actions:
     - nuclear
     - mining
   audience: business
+  priority: 0
 - id: T021
-  priority: 5
   title: Check what documents you and your employees need to make and operate aircraft
     for the gas and oil industry in the EU, Switzerland, Norway, Iceland or Liechtenstein
   consequence: You will not be able to make or operate aircraft for the gas and oil
@@ -591,8 +573,8 @@ actions:
     - air-passenger-freight
     - oil-gas-coal
   audience: business
+  priority: 0
 - id: T022
-  priority: 8
   title: Check if you need to change your contract to keep accessing personal data
     from the EU, Norway, Iceland or Liechtenstein
   consequence: You may not be able to access personal data from the EU without the
@@ -607,8 +589,8 @@ actions:
     - personal-eu-org-use
     - personal-eu-org-provide
   audience: business
+  priority: 0
 - id: T023
-  priority: 8
   title: Check the rules you need to follow if you're a broadcaster or provider of
     video-on-demand services in the UK or the EU
   consequence: You risk not being able to broadcast or provide video-on-demand services
@@ -621,8 +603,8 @@ actions:
     - media
     - digital
   audience: business
+  priority: 0
 - id: T025
-  priority: 5
   title: Get permission to take creative, cultural and sports goods into and out of
     the EU for business
   title_url: https://www.gov.uk/taking-goods-out-uk-temporarily/get-an-ata-carnet
@@ -635,8 +617,8 @@ actions:
     - sports
     - culture
   audience: business
+  priority: 0
 - id: T026
-  priority: 5
   title: Appoint a representative in the EU if you run a large UK-based online business
     providing digital services in the EU
   consequence: You risk being fined if you do not have a representative to help you
@@ -651,8 +633,8 @@ actions:
     - telecoms
     - personal-eu-org-provide
   audience: business
+  priority: 0
 - id: T028
-  priority: 8
   title: Export fish through the right EU border inspection post and prepare the right
     documentation
   consequence: You risk your fish being delayed or rejected when they reach the EU
@@ -668,8 +650,8 @@ actions:
     - postal-couriers
     - fish-inc-wholesale
   audience: business
+  priority: 0
 - id: T032
-  priority: 8
   title: Check the rules on moving plants and plant products between the UK and the
     EU
   consequence: You risk plants or plant products being delayed or rejected if you
@@ -686,8 +668,8 @@ actions:
       - export-to-eu
       - import-from-eu
   audience: business
+  priority: 0
 - id: T033
-  priority: 8
   title: Get the right certificates of conformity to move fruit and vegetables into
     or through the EU
   consequence: You risk your goods being delayed or rejected at the border if you
@@ -703,8 +685,8 @@ actions:
       - agriculture-farm
       - food-drink-tobacco
   audience: business
+  priority: 0
 - id: T034
-  priority: 8
   title: Check how to register or label food or drink with a protected name
   consequence: You risk your geographical indicator name not being protected if you
     do not register correctly.
@@ -717,8 +699,8 @@ actions:
     - agriculture-farm
     - food-drink-tobacco
   audience: business
+  priority: 0
 - id: T035
-  priority: 8
   title: Register as an approved food establishment to export food to the EU
   title_url: https://www.food.gov.uk/business-guidance/applying-for-approval-of-a-food-establishment
   consequence: You will not be able to export food to the EU if you do not register.
@@ -735,8 +717,8 @@ actions:
       - agriculture-farm
     - export-to-eu
   audience: business
+  priority: 0
 - id: T036
-  priority: 8
   title: Check how to label food if you're selling it in the UK or EU
   consequence: You risk not being able to sell goods in the EU if they're labelled
     incorrectly.
@@ -750,8 +732,8 @@ actions:
     - fish-inc-wholesale
     - agriculture-farm
   audience: business
+  priority: 0
 - id: T038
-  priority: 8
   title: Check if you can export organic food to the EU, and how to label and trade
     it
   consequence: You risk not being able to sell your food as organic in the EU.
@@ -767,8 +749,8 @@ actions:
       - agriculture-farm
     - export-to-eu
   audience: business
+  priority: 0
 - id: T044
-  priority: 5
   title: Enrol with the Rural Payments Agency to prepare to export hops to the EU
   consequence: You will not be able to apply for the correct documents you'll need
     to export hops to the EU if you do not enrol.
@@ -781,8 +763,8 @@ actions:
     - food-drink-tobacco
     - agriculture-farm
   audience: business
+  priority: 0
 - id: T045
-  priority: 5
   title: Print 'GB', 'GBR' or '826' on each egg you're exporting to the EU for people
     to eat
   consequence: You risk your eggs being delayed or rejected when they reach the EU
@@ -793,8 +775,8 @@ actions:
   criteria:
   - agriculture-farm
   audience: business
+  priority: 0
 - id: T046
-  priority: 5
   title: Check how to mark hatching eggs and boxes of chicks that you're exporting
     to the EU
   consequence: You risk your eggs or chicks being delayed or rejected when they reach
@@ -805,8 +787,8 @@ actions:
   criteria:
   - agriculture-farm
   audience: business
+  priority: 0
 - id: T047
-  priority: 5
   title: Get a certificate to export poultry meat to the EU if the meat is printed
     with a farming method
   consequence: If your meat is printed with a farming method, such as 'free range',
@@ -819,12 +801,12 @@ actions:
   criteria:
   - agriculture-farm
   audience: business
+  priority: 0
 - id: T050
-  priority: 8
   title: Get an International Maritime Organisation (IMO) number if your fishing boat
     is 12 metres or longer
   title_url: https://imonumbers.ihs.com/
-  consequence: If your boat is 12 metres or longer, you wil not be allowed to to fish
+  consequence: If your boat is 12 metres or longer, you will not be allowed to fish
     in EU, Norwegian or Faroese waters without an IMO number.
   guidance_prompt: More information
   guidance_link_text: Prepare your fisheries business for 2021
@@ -834,8 +816,8 @@ actions:
     - marine-transport
     - fish-inc-wholesale
   audience: business
+  priority: 0
 - id: T051
-  priority: 5
   title: Check what you need to do to land your fish catch at a port in the EU
   consequence: You risk your fish being delayed or rejected when you reach the port
     if you do not have the right documents.
@@ -847,8 +829,8 @@ actions:
     - marine-transport
     - fish-inc-wholesale
   audience: business
+  priority: 0
 - id: T052
-  priority: 8
   title: Register your chemicals to an organisation based in the EU if you want to
     export them to the EU
   consequence: You risk not being able to export your chemicals if you do not register
@@ -860,8 +842,8 @@ actions:
   criteria:
   - chemical
   audience: business
+  priority: 0
 - id: T057
-  priority: 4
   title: Check which carbon pricing policies you need to comply with
   consequence: You risk not complying correctly with emissions reporting and carbon
     pricing regulations, which could lead to a fine.
@@ -892,19 +874,19 @@ actions:
     - digital
     - telecoms
   audience: business
+  priority: 0
 - id: T059
-  priority: 5
   title: Check whether any wood packaging you use meets ISPM15 international standards
   consequence: You may not be able to export using wood packaging that is not ISPM15
     certified.
   guidance_prompt: More information
-  guidance_link_text: Wood packaging goods for import and export
-  guidance_url: https://www.gov.uk/wood-packaging-import-export
+  guidance_link_text: Movement of wood packaging material from 2021
+  guidance_url: https://www.gov.uk/guidance/importing-and-exporting-plants-and-plant-products-from-1-january-2021#movement-of-wood-packaging-material
   criteria:
-  - forestry
+  - export-to-eu
   audience: business
+  priority: 0
 - id: T063
-  priority: 6
   title: Check what documents you need to run unscheduled bus or coach services in
     Europe
   consequence: You risk not being able to run unscheduled services in Europe if you
@@ -918,8 +900,8 @@ actions:
     - tourism
     - road-passenger-freight
   audience: business
+  priority: 0
 - id: T065
-  priority: 5
   title: Check what documents you need to transport goods through the EU if you’re
     a haulier
   consequence: You will not be able to transport goods through the EU without the
@@ -932,8 +914,8 @@ actions:
     - road-passenger-freight
     - haulage-goods-across-eu-borders
   audience: business
+  priority: 0
 - id: T066
-  priority: 5
   title: Check how to get approval to sell vehicles and vehicle parts in the UK and
     the EU
   consequence: You will not be able to sell non-approved vehicles or vehicle parts
@@ -948,8 +930,8 @@ actions:
     - road-passenger-freight
     - motor-trade
   audience: business
+  priority: 0
 - id: T071
-  priority: 8
   title: Get an EORI number that starts with GB to move your goods into or out of
     the EU
   title_url: https://www.gov.uk/eori
@@ -967,8 +949,8 @@ actions:
     - haulage-goods-across-eu-borders
     - road-passenger-freight
   audience: business
+  priority: 0
 - id: T075
-  priority: 8
   title: Register for a quicker way to move your goods to the EU, Switzerland, Norway,
     Iceland or Liechtenstein
   title_url: https://www.gov.uk/guidance/what-you-need-to-move-goods-between-or-through-common-transit-countries-including-the-eu
@@ -983,8 +965,8 @@ actions:
     - export-to-eu
     - haulage-goods-across-eu-borders
   audience: business
+  priority: 0
 - id: T077
-  priority: 2
   title: Encourage your employees to check if they need to apply to the EU Settlement
     Scheme
   consequence: Your employees risk not being able to continue living or working in
@@ -995,8 +977,8 @@ actions:
   criteria:
   - employ-eu-citizens
   audience: business
+  priority: 0
 - id: T078
-  priority: 6
   title: Check what documents you need to run scheduled bus or coach services in EU
     countries
   consequence: You may not be able to run regular bus or coach services in EU countries
@@ -1007,22 +989,22 @@ actions:
   criteria:
   - road-passenger-freight
   audience: business
+  priority: 0
 - id: T080
-  priority: 5
-  title: Disclose your designs if you want unregistered protection in the UK and EU
-  consequence: If you do not do this you’ll only have protection where you first showed
-    your design, either the UK or the EU.
+  title: Check the new rules for unregistered design protection in the UK and EU
+  consequence: You may not have IP protection if you do not disclose your designs
+    correctly.
   guidance_prompt: More information
   guidance_link_text: Changes to EU and international designs and trade mark protection
     from 1 January 2021
-  guidance_url: https://www.gov.uk/guidance/changes-to-unregistered-designs-after-the-transition-period
+  guidance_url: https://www.gov.uk/guidance/changes-to-eu-and-international-designs-and-trade-mark-protection-after-the-transition-period
   criteria:
   - any_of:
     - ip-copyright
     - ip-designs
   audience: business
+  priority: 0
 - id: T081
-  priority: 5
   title: Check what you need to do to continue to work or provide legal services in
     the UK, if you're a lawyer with a qualification from the EU, Norway, Iceland or
     Liechtenstein
@@ -1034,8 +1016,8 @@ actions:
   criteria:
   - legal-service
   audience: business
+  priority: 0
 - id: T082
-  priority: 5
   title: Check what you need to do if you own a UK legal services business
   consequence: You risk not being able to continue providing legal services in the
     same way if you do not meet new requirements.
@@ -1045,8 +1027,8 @@ actions:
   criteria:
   - legal-service
   audience: business
+  priority: 0
 - id: T085
-  priority: 5
   title: Get your UK qualification recognised if you want to work in a regulated profession
     in the EU, Norway, Iceland or Liechtenstein
   consequence: You risk not being able to continue working or providing services in
@@ -1060,8 +1042,8 @@ actions:
     - legal-service
     - construction
   audience: business
+  priority: 0
 - id: T086
-  priority: 5
   title: Check if you need to apply for plant variety rights to market seeds in the
     UK and EU
   consequence: You risk your varieties not being protected unless you apply for rights
@@ -1077,8 +1059,8 @@ actions:
     - agriculture-farm
     - forestry
   audience: business
+  priority: 0
 - id: T087
-  priority: 8
   title: Check if you need to get a phytosanitary certificate to export plants to
     the EU
   consequence: You risk the plants being delayed or rejected when they reach the EU
@@ -1093,8 +1075,8 @@ actions:
     - forestry
     - food-drink-tobacco
   audience: business
+  priority: 0
 - id: T088
-  priority: 5
   title: If you buy chemicals from the EU, you will need to register on the new UK
     REACH system
   consequence: You risk not being able to bring chemicals into the UK if you do not
@@ -1108,8 +1090,8 @@ actions:
     - chemical
     - import-from-eu
   audience: business
+  priority: 0
 - id: T089
-  priority: 5
   title: Ask your vet what you need to do before you take your horse or other equine
     to the EU
   consequence: You will not be able to take your horse or other equine to the EU if
@@ -1123,8 +1105,8 @@ actions:
     - animal-ex-food
     - sports
   audience: business
+  priority: 0
 - id: T090
-  priority: 5
   title: Export animals or products of animal origin (POAO) through the right EU border
     inspection post and prepare the right documents
   consequence: You risk your animals or products being delayed or rejected when they
@@ -1138,8 +1120,8 @@ actions:
   criteria:
   - animal-ex-food
   audience: business
+  priority: 0
 - id: T091
-  priority: 5
   title: Check guidance on the Kimberly Process Certification Scheme for trading rough
     diamonds
   consequence: You will not be able to export rough diamonds from 1 January 2021 unless
@@ -1150,8 +1132,8 @@ actions:
   criteria:
   - diamond
   audience: business
+  priority: 0
 - id: T092
-  priority: 5
   title: Check the rules on moving timber and timber products between the UK and the
     EU
   consequence: You risk your timber or timber products being delayed or rejected if
@@ -1162,8 +1144,8 @@ actions:
   criteria:
   - forestry
   audience: business
+  priority: 0
 - id: T093
-  priority: 5
   title: Check if you need new licences for any drug precursor chemicals you import
     or export
   consequence: You risk your chemicals being seized and you will be breaking the law
@@ -1181,8 +1163,8 @@ actions:
       - export-to-eu
       - import-from-eu
   audience: business
+  priority: 0
 - id: T096
-  priority: 1
   title: Check the rules on moving waste between the UK and the EU
   consequence: You risk your waste shipments being delayed or rejected if you do not
     follow the right rules.
@@ -1196,8 +1178,8 @@ actions:
       - import-from-eu
       - export-to-eu
   audience: business
+  priority: 0
 - id: T097
-  priority: 2
   title: Check if you need a CITES permit when moving endangered animal or plant species
     between the UK and the EU
   consequence: You risk not being able to move animals or plants protected under CITES.
@@ -1212,8 +1194,8 @@ actions:
     - forestry
     - animal-ex-food
   audience: business
+  priority: 0
 - id: T098
-  priority: 5
   title: Check the rules on making or placing pesticides on the UK market
   consequence: You may not be able to sell new pesticides on the UK market.
   guidance_prompt: More information
@@ -1222,8 +1204,8 @@ actions:
   criteria:
   - chemical
   audience: business
+  priority: 0
 - id: T099
-  priority: 8
   title: Decide how you want to make customs declarations and whether you need to
     get someone to deal with customs for you
   consequence: You risk not being able to import or export goods if you do not get
@@ -1236,8 +1218,8 @@ actions:
     - import-from-eu
     - export-to-eu
   audience: business
+  priority: 0
 - id: T100
-  priority: 5
   title: Apply for a licence to export cultural objects
   consequence: You might not be able to take items such as works of art and historical
     objects out of the UK without the correct licence.
@@ -1247,8 +1229,8 @@ actions:
   criteria:
   - culture
   audience: business
+  priority: 0
 - id: T101
-  priority: 5
   title: Register for a licence to export dual-use items to the EU and Channel Islands 
   consequence: You will not be able to export your goods without an export licence.
   guidance_prompt: More information
@@ -1266,8 +1248,8 @@ actions:
     - mining
     - non-metal-material
   audience: business
+  priority: 0
 - id: T102
-  priority: 9
   title: Find out how to export your goods to the UK if you're an overseas business
   consequence: You risk not being able to export your goods to the UK after 1 January
     2021.
@@ -1279,20 +1261,20 @@ actions:
     - owns-operates-business-organisation-eu
     - owns-operates-business-organisation-row
   audience: business
+  priority: 0
 - id: T103
-  priority: 8
   title: Check if you need to pay a tariff on the goods you import from 1 January
     2021
   consequence: You risk penalties and your goods not getting through customs if you
     do not pay the correct tariff.
   guidance_prompt: More information
-  guidance_link_text: Check UK trade tariffs from 1 January 2021
+  guidance_link_text: UK tariffs from 1 January 2021
   guidance_url: https://www.gov.uk/guidance/uk-tariffs-from-1-january-2021
   criteria:
   - import-from-eu
   audience: business
+  priority: 0
 - id: S038
-  priority: 6
   title: Sign up for email updates if you're a UK national living in the EU, Switzerland,
     Norway, Iceland or Liechtenstein
   consequence: You might miss updates about what you need to do to stay in the country
@@ -1307,8 +1289,8 @@ actions:
   audience: citizen
   grouping_criteria:
   - living-eu
+  priority: 0
 - id: S039
-  priority: 1
   title: Find out your right to live, work or study in the Common Travel Area if you're
     an Irish or UK national
   consequence: You can continue to live, work or study within the Common Travel Area.
@@ -1322,8 +1304,8 @@ actions:
   audience: citizen
   grouping_criteria:
   - common-travel-area
+  priority: 0
 - id: S040
-  priority: 4
   title: Check if your benefits will be affected if you move to a country in the EU,
     Switzerland, Norway, Iceland or Liechtenstein
   consequence: Your right to receive some UK benefits will change if you move on or
@@ -1336,8 +1318,8 @@ actions:
   audience: citizen
   grouping_criteria:
   - living-eu
+  priority: 0
 - id: T104
-  priority: 3
   title: Get provisional GB approval to be able to sell EC-approved vehicles in the
     UK
   consequence: You will not be able to sell your products in Great Britain if they
@@ -1351,8 +1333,8 @@ actions:
     - road-passenger-freight
     - motor-trade
   audience: business
+  priority: 0
 - id: T105
-  priority: 3
   title: Check you have the correct EU type approval to continue selling vehicles
     in the EU
   consequence: You will not be able to continue selling your products in the EU if
@@ -1366,8 +1348,8 @@ actions:
     - road-passenger-freight
     - motor-trade
   audience: business
+  priority: 0
 - id: S041
-  priority: 9
   title: Check what you need to do to access healthcare in the country you'll be living
     in
   consequence: If you are not registered for local healthcare or do not have the right
@@ -1386,8 +1368,8 @@ actions:
   audience: citizen
   grouping_criteria:
   - living-eu
+  priority: 0
 - id: T106
-  priority: 8
   title: Check the rules, tax and duty rates for exporting to the rest of the world
   consequence: You risk not being able to export your goods if you do not follow the
     rules.
@@ -1397,8 +1379,8 @@ actions:
   criteria:
   - export-to-row
   audience: business
+  priority: 0
 - id: T107
-  priority: 3
   title: Apply for Horizon 2020 funding
   consequence: You may miss out on Horizon 2020 funding opportunities if you do not
     apply.
@@ -1408,8 +1390,8 @@ actions:
   criteria:
   - eu-uk-funding
   audience: business
+  priority: 0
 - id: T108
-  priority: 9
   title: Check how to trade or move goods into, out of, or through Northern Ireland
   consequence: You may not be able to trade or move goods if you do not follow the
     new rules.
@@ -1420,8 +1402,8 @@ actions:
   criteria:
   - move-goods-ni
   audience: business
+  priority: 0
 - id: T109
-  priority: 8
   title: Get ready to export to the EU from 1 January 2021
   title_url: https://www.gov.uk/prepare-to-export-from-great-britain-from-january-2021
   consequence: You will not be able to export goods to the EU unless you follow the
@@ -1429,8 +1411,8 @@ actions:
   criteria:
   - export-to-eu
   audience: business
+  priority: 0
 - id: T110
-  priority: 8
   title: Get ready to import goods from the EU from 1 January 2021
   title_url: https://www.gov.uk/prepare-to-import-to-great-britain-from-january-2021
   consequence: You will not be able to import goods from the EU without following
@@ -1438,19 +1420,28 @@ actions:
   criteria:
   - import-from-eu
   audience: business
+  priority: 0
 - id: T111
-  priority: 6
   title: Check if you need to replace your .eu domain name
-  title_url: https://www.gov.uk/guidance/eu-domain-names-what-you-need-to-do-to-get-ready-for-brexit
-  consequence: You may not be able to hold, register or renew a .eu domain name from 1 January 2021.
+  consequence: You may not be able to hold, register or renew a .eu domain name from
+    1 January 2021.
+  guidance_prompt: More information
+  guidance_link_text: ".eu domain names - what you need to do before the end of the
+    transition period"
+  guidance_url: https://www.gov.uk/guidance/eu-domain-names-what-you-need-to-do-to-get-ready-for-brexit
   criteria:
   - eu-domain
   audience: business
+  priority: 0
 - id: T112
-  priority: 8
-  title: Register for the UK’s new Import of Products, Animals, Food and Feed System (IPAFFS)
-  title_url: https://www.gov.uk/guidance/importing-animals-animal-products-and-high-risk-food-and-feed-not-of-animal-origin-from-1-january-2021
-  consequence: You will not be able to import using the TRACES system from 1 January 2021.
+  title: Register for the UK’s new Import of Products, Animals, Food and Feed System
+    (IPAFFS)
+  consequence: You will not be able to import using the TRACES system from 1 January
+    2021.
+  guidance_prompt: More information
+  guidance_link_text: Importing animals, animal products and high-risk food and feed
+    not of animal origin from 1 January 2021
+  guidance_url: https://www.gov.uk/guidance/importing-animals-animal-products-and-high-risk-food-and-feed-not-of-animal-origin-from-1-january-2021
   criteria:
   - all_of:
     - import-from-eu
@@ -1459,48 +1450,94 @@ actions:
       - agriculture-farm
       - food-drink-tobacco
   audience: business
+  priority: 0
 - id: T113
-  priority: 2
-  title: Check the rules for reporting unfair trade practices using the UK's new trade remedies service
-  title_url: https://www.gov.uk/guidance/applying-for-a-trade-remedies-investigation
-  consequence: You risk being affected if imported goods are dumped on the UK market or are benefiting from subsidies – or if there is a sudden increase in imports to the UK of a certain product.
+  title: Check the rules for reporting unfair trade practices using the UK's new trade
+    remedies service
+  consequence: You risk being affected if imported goods are dumped on the UK market
+    or are benefiting from subsidies – or if there is a sudden increase in imports
+    to the UK of a certain product.
+  guidance_prompt: More information
+  guidance_link_text: Applying for a trade remedies investigation
+  guidance_url: https://www.gov.uk/guidance/applying-for-a-trade-remedies-investigation
   criteria:
   - owns-operates-business-organisation-uk
   audience: business
+  priority: 0
 - id: T114
-  priority: 2
-  title: Check if there's a trade agreement with any non-EU country you're planning to trade with from 1 January 2021
-  title_url: https://www.gov.uk/guidance/uk-trade-agreements-with-non-eu-countries
+  title: Check if there's a trade agreement with any non-EU country you're planning
+    to trade with from 1 January 2021
   consequence: You risk disruption to your trading arrangements and unexpected costs.
+  guidance_prompt: More information
+  guidance_link_text: Existing UK trade agreements with non-EU countries
+  guidance_url: https://www.gov.uk/guidance/uk-trade-agreements-with-non-eu-countries
   criteria:
   - any_of:
     - trade-developing
     - export-to-row
   audience: business
+  priority: 0
 - id: T115
-  priority: 1
-  title: Register with HSE to find out when guidance on the duties for classifying, labelling and packaging chemicals for the GB market is available
-  title_url: https://www.hse.gov.uk/brexit/chemicals-brexit-guidance.htm?utm_source=gov.uk&utm_medium=referral&utm_campaign=eu-transition&utm_content=checker-tool
-  consequence: You must make sure chemicals are classified, labelled and packaged according to GB regulations.
+  title: Register with HSE to find out when guidance on the duties for classifying,
+    labelling and packaging chemicals for the GB market is available
+  consequence: You must make sure chemicals are classified, labelled and packaged
+    according to GB regulations.
+  guidance_prompt: More information
+  guidance_link_text: 'Brexit: Chemicals industry guidance'
+  guidance_url: https://www.hse.gov.uk/brexit/chemicals-brexit-guidance.htm?utm_source=gov.uk&utm_medium=referral&utm_campaign=eu-transition&utm_content=checker-tool
   criteria:
   - chemical
   audience: business
+  priority: 0
 - id: T116
-  priority: 1
-  title: Register with HSE to find out when guidance on processes for biocidal active substance approval and product authorisation is available
-  title_url: https://www.hse.gov.uk/brexit/chemicals-brexit-guidance.htm?utm_source=gov.uk&utm_medium=referral&utm_campaign=eu-transition&utm_content=checker-tool
-  consequence: You may have delays in getting access to the right materials to continue with your work.
+  title: Register with HSE to find out when guidance on processes for biocidal active
+    substance approval and product authorisation is available
+  consequence: You may have delays in getting access to the right materials to continue
+    with your work.
+  guidance_prompt: More information
+  guidance_link_text: 'Brexit: Chemicals industry guidance'
+  guidance_url: https://www.hse.gov.uk/brexit/chemicals-brexit-guidance.htm?utm_source=gov.uk&utm_medium=referral&utm_campaign=eu-transition&utm_content=checker-tool
   criteria:
   - chemical
   audience: business
+  priority: 0
 - id: T117
-  priority: 3
-  title: Contact your regulator if you are a UK lawyer working permanently in the EU, Norway, Iceland or Liechtenstein
-  consequence: You risk not being able to continue providing legal services in the same way if you do not meet new requirements.
-  guidance_link_text: UK laywers practising in the EU, Norway, Iceland or Liechtenstein from 1 January 2021
+  title: Contact your regulator if you are a UK lawyer working permanently in the
+    EU, Norway, Iceland or Liechtenstein
+  consequence: You risk not being able to continue providing legal services in the
+    same way if you do not meet new requirements.
+  guidance_prompt: More information
+  guidance_link_text: UK laywers practising in the EU, Norway, Iceland or Liechtenstein
+    from 1 January 2021
   guidance_url: https://www.gov.uk/government/publications/uk-lawyers-practising-in-the-eu-norway-iceland-or-liechtenstein-from-1-january-2021/uk-lawyers-practising-in-the-eu-norway-iceland-or-liechtenstein-after-1-january-2021
   criteria:
   - all_of:
     - working-eu
     - legal-service
   audience: business
+  priority: 0
+- id: T118
+  title: Check the rules for providing online services to the EU, Norway, Iceland
+    or Liechtenstein
+  consequence: You may be breaking the law if you do not follow the rules in the country
+    you provide online services to.
+  guidance_prompt: More information
+  guidance_link_text: The eCommerce Directive after the transition period
+  guidance_url: https://www.gov.uk/guidance/ecommerce-directive-what-online-service-providers-in-the-uk-should-do-to-get-ready-for-brexit
+  criteria:
+  - export-to-eu
+  audience: business
+  priority: 0
+- id: T119
+  title: Check if you need to update your copyright licenses to satellite broadcast
+    to the EU
+  consequence: You risk breaking copyright rules if you do not have the right permissions.
+  guidance_prompt: More information
+  guidance_link_text: Changes to copyright law from 1 January 2021
+  guidance_url: https://www.gov.uk/guidance/changes-to-copyright-law-after-the-transition-period
+  criteria:
+  - any_of:
+    - ip-copyright
+    - media
+  audience: business
+  priority: 0
