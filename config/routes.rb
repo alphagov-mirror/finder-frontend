@@ -45,5 +45,6 @@ FinderFrontend::Application.routes.draw do
   # GOV.UK Accounts discovery routes
   get "/transition-check/save-your-results" => "brexit_checker#save_results", as: :transition_checker_save_results
 
+  # Whatever else you do here... keep this at the bottom of the file
   get "/*slug" => "finders#show", as: :finder
 end
