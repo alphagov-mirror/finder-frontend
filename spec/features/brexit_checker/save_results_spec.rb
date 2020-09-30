@@ -4,7 +4,6 @@ require "gds_api/test_helpers/email_alert_api"
 RSpec.feature "Brexit Checker create GOV.UK Account", type: :feature do
   include GdsApi::TestHelpers::ContentStore
   include GdsApi::TestHelpers::EmailAlertApi
-  include AccountSignupHelper
 
   let(:subscriber_list) do
     {
@@ -20,17 +19,20 @@ RSpec.feature "Brexit Checker create GOV.UK Account", type: :feature do
   let(:jwt) { "i_am_a_string_pretending_to_be_a_jwt" }
 
   before do
+      ENV["GOVUK_ACCOUNT_OAUTH_CLIENT_ID"] = "Application's OAuth client ID"
+      ENV["GOVUK_ACCOUNT_OAUTH_CLIENT_KEY_UUID"] = "fake_key_uuid"
+      ENV["GOVUK_ACCOUNT_OAUTH_CLIENT_KEY"] = "-----BEGIN EC PRIVATE KEY-----\nMHcCAQEEIBjlMYhN/1FiZX7RRUyKpqDM2bPIHQswhjm+ZPaOXlgQoAoGCCqGSM49\nAwEHoUQDQgAE2pGXU3YkENblp+SMC8CWpkwPDdWXJdEsXoSQ8dWNYxFFbnXKN4Vv\nRGeLYoNKjuK/2t9rlEEumIzm5EtMxts7Jg==\n-----END EC PRIVATE KEY-----\n"
+      ENV["PLEK_SERVICE_ACCOUNT_MANAGER_URI"] = "http://account.service.dev.test.gov.uk/"
+      ENV["FEATURE_FLAG_ACCOUNTS"] = "enabled"
     allow(Rails.configuration).to receive(:feature_flag_govuk_accounts).and_return(true)
     allow(Services).to receive(:accounts_api).and_return("http://account.service.dev.test.gov.uk/")
   end
 
   scenario "user clicks Create a GOV.UK account" do
-    with_account_feature_flag_and_variables_set do
-      given_im_on_the_results_page
-      then_i_click_to_subscribe
-      and_i_am_taken_to_choose_how_to_subscribe_page
-      i_see_a_create_account_button
-    end
+    given_im_on_the_results_page
+    then_i_click_to_subscribe
+    and_i_am_taken_to_choose_how_to_subscribe_page
+    i_see_a_create_account_button
   end
 
   def given_im_on_the_results_page

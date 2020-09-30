@@ -4,7 +4,6 @@ require "gds_api/test_helpers/email_alert_api"
 RSpec.feature "Brexit Checker email signup", type: :feature do
   include GdsApi::TestHelpers::ContentStore
   include GdsApi::TestHelpers::EmailAlertApi
-  include AccountSignupHelper
 
   let(:subscriber_list) do
     {
@@ -39,36 +38,37 @@ RSpec.feature "Brexit Checker email signup", type: :feature do
 
   context "with the GOV.UK Account feature flag" do
     before do
+      ENV["GOVUK_ACCOUNT_OAUTH_CLIENT_ID"] = "Application's OAuth client ID"
+      ENV["GOVUK_ACCOUNT_OAUTH_CLIENT_KEY_UUID"] = "fake_key_uuid"
+      ENV["GOVUK_ACCOUNT_OAUTH_CLIENT_KEY"] = "-----BEGIN EC PRIVATE KEY-----\nMHcCAQEEIBjlMYhN/1FiZX7RRUyKpqDM2bPIHQswhjm+ZPaOXlgQoAoGCCqGSM49\nAwEHoUQDQgAE2pGXU3YkENblp+SMC8CWpkwPDdWXJdEsXoSQ8dWNYxFFbnXKN4Vv\nRGeLYoNKjuK/2t9rlEEumIzm5EtMxts7Jg==\n-----END EC PRIVATE KEY-----\n"
+      ENV["PLEK_SERVICE_ACCOUNT_MANAGER_URI"] = "http://account.service.dev.test.gov.uk/"
+      ENV["FEATURE_FLAG_ACCOUNTS"] = "enabled"
       allow(Rails.configuration).to receive(:feature_flag_govuk_accounts).and_return(true)
       allow(Services).to receive(:accounts_api).and_return("http://account.service.dev.test.gov.uk/")
     end
 
     scenario "user clicks to signup to email alerts with existing subscriber list" do
-      with_account_feature_flag_and_variables_set do
-        given_im_on_the_results_page
-        and_email_alert_api_has_subscriber_list
-        then_i_click_to_subscribe
-        and_i_am_taken_to_choose_how_to_subscribe_page
-        then_i_click_email_alerts_only
-        and_i_am_taken_to_email_alert_signup_page
-        then_i_click_to_subscribe
-        and_i_am_taken_to_email_alert_frontend
-      end
+      given_im_on_the_results_page
+      and_email_alert_api_has_subscriber_list
+      then_i_click_to_subscribe
+      and_i_am_taken_to_choose_how_to_subscribe_page
+      then_i_click_email_alerts_only
+      and_i_am_taken_to_email_alert_signup_page
+      then_i_click_to_subscribe
+      and_i_am_taken_to_email_alert_frontend
     end
 
     scenario "user clicks to signup to email alerts without existing subscriber list" do
-      with_account_feature_flag_and_variables_set do
-        given_im_on_the_results_page
-        and_email_alert_api_does_not_have_subscriber_list
-        and_email_alert_api_creates_subscriber_list
-        then_i_click_to_subscribe
-        and_i_am_taken_to_choose_how_to_subscribe_page
-        then_i_click_email_alerts_only
-        and_i_am_taken_to_email_alert_signup_page
-        then_i_click_to_subscribe
-        and_the_subscriber_list_was_created
-        and_i_am_taken_to_email_alert_frontend
-      end
+      given_im_on_the_results_page
+      and_email_alert_api_does_not_have_subscriber_list
+      and_email_alert_api_creates_subscriber_list
+      then_i_click_to_subscribe
+      and_i_am_taken_to_choose_how_to_subscribe_page
+      then_i_click_email_alerts_only
+      and_i_am_taken_to_email_alert_signup_page
+      then_i_click_to_subscribe
+      and_the_subscriber_list_was_created
+      and_i_am_taken_to_email_alert_frontend
     end
   end
 
