@@ -9,11 +9,7 @@ class LocationLookupService
     location_data = areas.map do |_, area|
       next if area["codes"]["gss"].blank?
 
-      {
-        gss: area["codes"]["gss"],
-        area_name: area["name"],
-        country: area["country_name"],
-      }
+      MapitPostcodeResponse.new(area)
     end
 
     location_data.compact
