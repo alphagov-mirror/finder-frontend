@@ -15,9 +15,9 @@ describe('Mobile filters modal', function () {
     '</button>' +
     '<div id="facet-wrapper" data-module="mobile-filters-modal" class="facets">' +
       '<div class="facets__box">' +
-        '<div class="facets__header">' +
+        '<div class="facets__header js-close-filters">' +
           '<h1 class="gem-c-title__text">Filter</h1>' +
-          '<button class="app-c-button-as-link facets__return-link js-close-filters" type="button">' +
+          '<button class="app-c-button-as-link facets__return-link" type="button">' +
             'Return to results' +
           '</button>' +
         '</div>' +
@@ -36,8 +36,8 @@ describe('Mobile filters modal', function () {
             'Clear all filters' +
           '</button>' +
         '</div>' +
-        '<div class="facets__footer">' +
-          '<button class="gem-c-button govuk-button js-close-filters" type="button">' +
+        '<div class="facets__footer js-close-filters">' +
+          '<button class="gem-c-button govuk-button" type="button">' +
             'Show <span class="js-result-count">9<span>' +
           '</button>' +
         '</div>' +
@@ -60,7 +60,7 @@ describe('Mobile filters modal', function () {
     })
 
     afterEach(function () {
-      document.querySelector('.js-close-filters').click()
+      document.querySelector('.js-close-filters button').click()
     })
 
     it('should show the modal', function () {
@@ -72,10 +72,10 @@ describe('Mobile filters modal', function () {
   describe('close button', function () {
     it('should hide the modal', function () {
       document.querySelector('.js-show-mobile-filters').click()
-      document.querySelector('.js-close-filters').click()
+      document.querySelector('.js-close-filters button').click()
 
       var modal = document.querySelector('.facets')
-      document.querySelector('.js-close-filters').click()
+      document.querySelector('.js-close-filters button').click()
       expect($(modal).is(':visible')).toBe(false)
     })
   })

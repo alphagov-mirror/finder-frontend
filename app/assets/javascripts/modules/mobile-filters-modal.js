@@ -8,8 +8,8 @@ window.GOVUK.Modules = window.GOVUK.Modules || {};
   MobileFiltersModal.prototype.start = function ($module) {
     this.$module = $module[0]
     this.$facetsBox = this.$module.querySelector('.facets__box')
-    this.$closeTriggers = this.$module.querySelectorAll('.js-close-filters')
-    this.$showResultsButton = this.$module.querySelector('.js-show-results')
+    this.$closeTriggers = this.$module.querySelectorAll('.js-close-filters button')
+    this.$showResultsButton = this.$module.querySelector('.js-show-results button')
     this.$clearFiltersTrigger = this.$module.querySelector('.js-clear-selected-filters')
     this.$body = document.querySelector('body')
 
