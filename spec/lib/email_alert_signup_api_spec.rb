@@ -300,10 +300,6 @@ describe EmailAlertSignupAPI do
     end
 
     context "Create link based subscriber lists" do
-      let(:default_filters) do
-        { "content_purpose_subgroup": %w[news speeches_and_statements] }
-      end
-
       context "part_of_taxonomy_tree facet" do
         let(:applied_filters) do
           { "all_part_of_taxonomy_tree" => %w[content_id_1 content_id_2] }
@@ -322,7 +318,6 @@ describe EmailAlertSignupAPI do
           req = stub_email_alert_api_has_subscriber_list(
             "links" => {
               taxon_tree: { all: %w[content_id_1 content_id_2] },
-              content_purpose_subgroup: { any: %w[news speeches_and_statements] },
             },
           )
           subject.signup_url
@@ -352,7 +347,6 @@ describe EmailAlertSignupAPI do
           req = stub_email_alert_api_has_subscriber_list(
             "links" => {
               content_store_document_type: { any: %w[document_type_1 document_type_2] },
-              content_purpose_subgroup: { any: %w[news speeches_and_statements] },
             },
           )
           subject.signup_url
@@ -394,7 +388,6 @@ describe EmailAlertSignupAPI do
           req = stub_email_alert_api_has_subscriber_list(
             "links" => {
               organisations: { any: %w[content_id_for_death-eaters content_id_for_ministry-of-magic] },
-              content_purpose_subgroup: { any: %w[news speeches_and_statements] },
             },
           )
           subject.signup_url
@@ -419,7 +412,6 @@ describe EmailAlertSignupAPI do
           req = stub_email_alert_api_has_subscriber_list(
             "links" => {
               world_locations: { any: %w[content_id_for_location_1 content_id_for_location_2] },
-              content_purpose_subgroup: { any: %w[news speeches_and_statements] },
             },
           )
           subject.signup_url
@@ -444,7 +436,6 @@ describe EmailAlertSignupAPI do
           req = stub_email_alert_api_has_subscriber_list(
             "links" => {
               people: { any: %w[content_id_for_albus-dumbledore content_id_for_ron-weasley] },
-              content_purpose_subgroup: { any: %w[news speeches_and_statements] },
             },
           )
           subject.signup_url
@@ -472,7 +463,6 @@ describe EmailAlertSignupAPI do
           req = stub_email_alert_api_has_subscriber_list(
             "links" => {
               roles: { any: %w[content_id_for_prime-minister] },
-              content_purpose_subgroup: { any: %w[news speeches_and_statements] },
             },
           )
 
