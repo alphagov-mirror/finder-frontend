@@ -43,9 +43,9 @@ actions:
   consequence: You will be charged for your NHS healthcare if you do not have the
     right insurance.
   guidance_prompt: More information
-  guidance_link_text: 'Healthcare from 2021: citizens of the EU, Norway, Iceland,
-    Liechtenstein and Switzerland visiting the UK'
-  guidance_url: https://www.gov.uk/guidance/healthcare-for-eu-and-efta-citizens-visiting-the-uk
+  guidance_link_text: Healthcare for visitors to the UK from the EU from 1 January
+    2021
+  guidance_url: https://www.gov.uk/guidance/healthcare-for-visitors-to-the-uk-from-the-eu-from-1-january-2021
   criteria:
   - all_of:
     - any_of:
@@ -154,14 +154,15 @@ actions:
   - visiting-ie
 - id: S011
   priority: 9
-  title: Take out appropriate travel insurance with health cover before travelling
-    to the EU
+  title: Check you’ve got an EHIC card or appropriate travel insurance with health
+    cover before travelling to the EU, Switzerland, Norway, Iceland or Liechtenstein
   consequence: You may not have access to free emergency medical treatment and could
-    be charged for your healthcare if you do not get health cover with your travel
-    insurance.
+    be charged for your healthcare if you do not have an EHIC card when visiting an
+    EU country, or appropriate travel insurance when visiting Switzerland, Norway,
+    Iceland or Liechtenstein.
   guidance_prompt: More information
-  guidance_link_text: Foreign travel insurance
-  guidance_url: https://www.gov.uk/guidance/foreign-travel-insurance
+  guidance_link_text: Apply for a free European Health Insurance Card (EHIC)
+  guidance_url: https://www.nhs.uk/using-the-nhs/healthcare-abroad/apply-for-a-free-ehic-european-health-insurance-card/
   criteria:
   - all_of:
     - nationality-uk
@@ -909,10 +910,12 @@ actions:
   priority: 6
   title: Check what documents you need to run bus or coach services in EU countries
   consequence: You may not be able to run bus or coach services in EU countries if
-    you do have the right documents or not request authorisation in time.
+    you do not request authorisation in time or have the right documents.
+  lead_time: It takes up to 6 months to get a special regular international service
+    authorised.
   guidance_prompt: More information
-  guidance_link_text: 'International bus and coach services: operator licences and
-    permits'
+  guidance_link_text: Run international bus or coach services and tours from 1 January
+    2021
   guidance_url: https://www.gov.uk/guidance/run-international-bus-or-coach-services-and-tours-from-1-january-2021
   criteria:
   - any_of:
@@ -1009,15 +1012,18 @@ actions:
 - id: T081
   priority: 5
   title: Check what you need to do to continue to work or provide legal services in
-    the UK, if you're a lawyer with a qualification from the EU, Norway, Iceland or
-    Liechtenstein
+    the UK, if you're a lawyer with a qualification from the EU, Switzerland, Norway,
+    Iceland or Liechtenstein
   consequence: You risk not being able to continue working or providing legal services
     in the UK if you do not prepare.
   guidance_prompt: More information
-  guidance_link_text: EU lawyers in the UK from 1 January 2021
+  guidance_link_text: Lawyers from the EU, Switzerland, Norway, Iceland or Liechtenstein
+    in the UK from 1 January 2021
   guidance_url: https://www.gov.uk/government/publications/eu-lawyers-in-the-uk-from-1-january-2021
   criteria:
-  - legal-service
+  - all_of:
+    - legal-service
+    - working-uk
   audience: business
 - id: T082
   priority: 5
@@ -1501,12 +1507,12 @@ actions:
 - id: T117
   priority: 5
   title: Contact your regulator if you are a UK lawyer working permanently in the
-    EU, Norway, Iceland or Liechtenstein
+    EU, Switzerland, Norway, Iceland or Liechtenstein
   consequence: You risk not being able to continue providing legal services in the
     same way if you do not meet new requirements.
   guidance_prompt: More information
-  guidance_link_text: UK laywers practising in the EU, Norway, Iceland or Liechtenstein
-    from 1 January 2021
+  guidance_link_text: UK lawyers practising in the EU, Switzerland, Norway, Iceland
+    or Liechtenstein from 1 January 2021
   guidance_url: https://www.gov.uk/government/publications/uk-lawyers-practising-in-the-eu-norway-iceland-or-liechtenstein-from-1-january-2021/uk-lawyers-practising-in-the-eu-norway-iceland-or-liechtenstein-after-1-january-2021
   criteria:
   - all_of:
